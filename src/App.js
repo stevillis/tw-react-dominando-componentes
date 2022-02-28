@@ -1,8 +1,12 @@
 import './App.css';
+import { MeuComponente, MeuComponente2 } from './components/MeuComponente';
 
 function App() {
   return (
-    <h1>Hello, world!</h1>
+    <>
+      <MeuComponente />
+      <MeuComponente2 />
+    </>
   );
 }
 
