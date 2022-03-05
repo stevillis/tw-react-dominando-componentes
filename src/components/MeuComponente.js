@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
 
 /*
 function MeuComponente() {
@@ -12,18 +11,19 @@ const MeuComponente2 = () => {
 */
 
 class MeuComponente extends Component {
-    render() {
-        return <h1>Hello, world!</h1>
-    }
+  render() {
+    const { props } = this;
+    return <h1>Hello, {props.nome}!</h1>;
+  }
 }
 
 export const MeusComponentes = {
-    MeuComponente2: function () {
-        return <h2>Welcome!</h2>
-    },
-    MeuComponente3: function () {
-        return <span>Raça</span>
-    },
-}
+  MeuComponente2: function () {
+    return <h2>Welcome!</h2>;
+  },
+  MeuComponente3: function (props) {
+    return <span>Raça, {props.nome}</span>;
+  },
+};
 
 export { MeuComponente };

@@ -1,14 +1,14 @@
-import './App.css';
-import { MeuComponente, MeusComponentes } from './components/MeuComponente';
+import "./App.css";
+import { MeuComponente, MeusComponentes } from "./components/MeuComponente";
 
 function App() {
-  const nome = 'MeuComponente3';
+  const nome = "MeuComponente3";
   const MeuComponente3 = MeusComponentes[nome];
   return (
     <>
-      <MeuComponente />
+      <MeuComponente nome="Jordan Laudon" />
       <MeusComponentes.MeuComponente2 />
-      <MeuComponente3 />
+      <MeuComponente3 nome="Laudon Jordan" />
     </>
   );
 }
