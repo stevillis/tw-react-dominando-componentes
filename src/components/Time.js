@@ -15,14 +15,21 @@ class Time extends Component {
             })
         }, 2000)
         */
+    }
 
-        setInterval(() => {
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            console.log(this.state.time);
             this.setState((state, props) => {
                 return {
                     time: state.time + 1
                 }
             })
-        }, 1000)
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     render() {
