@@ -17,4 +17,13 @@ class MeuComponente extends Component {
     }
 }
 
+export const MeusComponentes = {
+    MeuComponente2: function () {
+        return <h2>Welcome!</h2>
+    },
+    MeuComponente3: function () {
+        return <span>Raça</span>
+    },
+}
+
 export { MeuComponente };
