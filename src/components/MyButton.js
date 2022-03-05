@@ -13,10 +13,11 @@ class MyButton extends Component {
     }
 
     // Precisa de bind
-    handleClick() {
+    handleClick(parameter) {
+        console.log(parameter);
         this.setState((state, props) => {
             return { isOn: !state.isOn };
-        })
+        });
     }
 
     // Não precisa de bind
@@ -27,7 +28,7 @@ class MyButton extends Component {
     render() {
         const { state } = this;
         return (
-            <button onClick={this.handleClick}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
+            <button onClick={this.handleClick.bind(this, `isOn: ${state.isOn}`)}>{state.isOn ? 'Desligar' : 'Ligar'}</button>
         );
     }
 }
