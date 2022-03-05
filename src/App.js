@@ -1,5 +1,7 @@
 import "./App.css";
+
 import { MeuComponente } from "./components/MeuComponente";
+import Time from './components/Time';
 
 function App() {
   const dados = {
@@ -8,9 +10,12 @@ function App() {
     idade: 28
   }
   return (
-    <MeuComponente
-      {...dados}
-    />
+    <div>
+      <MeuComponente
+        {...dados}
+      />
+      <Time />
+    </div>
   );
 }
 
