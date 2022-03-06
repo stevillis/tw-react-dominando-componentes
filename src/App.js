@@ -1,11 +1,15 @@
 import "./App.css";
+import ClickList from "./components/ClickList";
 
-import PeopleList from "./components/PeopleList";
 
 function App() {
   return (
     <div>
-      <PeopleList />
+      <ClickList>
+        <span>Apple</span>
+        <span>Watermelon</span>
+        <span>Melon</span>
+      </ClickList>
     </div>
   );
 }
