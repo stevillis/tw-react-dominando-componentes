@@ -1,11 +1,11 @@
 import "./App.css";
 
-import MyButton from './components/MyButton';
+import PeopleList from "./components/PeopleList";
 
 function App() {
   return (
     <div>
-      <MyButton />
+      <PeopleList />
     </div>
   );
 }
