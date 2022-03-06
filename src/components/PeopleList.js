@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 
 const data = [
@@ -41,6 +41,27 @@ class PeopleList extends Component {
                 }
             </ul>
         );
+    }
+}
+
+class ExampleFragment1 extends Component {
+    render() {
+        return <Fragment key={1}>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </Fragment>
+    }
+}
+
+
+class ExampleFragment2 extends Component {
+    render() {
+        return <>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </>
     }
 }
 
