@@ -1,15 +1,15 @@
 import "./App.css";
 import ClickList from "./components/ClickList";
+import ClickListItem from "./components/ClickListItem";
 
 
 function App() {
   return (
     <div>
-      <ClickList number="123">
-        <h1>
-          Hello, world!
-        </h1>
-        <span>Apple</span>
+      <ClickList>
+        <ClickListItem></ClickListItem>
+        <ClickListItem></ClickListItem>
+        <ClickListItem></ClickListItem>
       </ClickList>
     </div>
   );
