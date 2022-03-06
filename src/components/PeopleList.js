@@ -18,15 +18,11 @@ const data = [
 
 class PeopleList extends Component {
     render() {
-        const peopleList = [];
-        for (let i = 0; i < data.length; i++) {
-            peopleList.push(
-                <li>Nome: {data[i].nome}, Idade: {data.idade} anos</li>
-            )
-        }
         return (
             <ul>
-                {peopleList}
+                {data.map(person =>
+                    <li>Nome: {person.nome}, Idade: {person.idade} anos</li>
+                )}
             </ul>
         );
     }
