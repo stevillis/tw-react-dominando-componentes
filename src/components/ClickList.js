@@ -3,18 +3,20 @@ import React, { Component } from 'react';
 class ClickList extends Component {
     render() {
         return (
-            <>
-                <h1>
-                    Hello, world!
-                </h1>
-                <ol>
+            <div>
+                items
+                <ul>
                     {
-                        this.props.children.map(element => (
-                            <li>element</li>
-                        ))
+                        this.props.children.map(element => {
+                            return <li>
+                                <element.type prop2={this.props.number}>
+                                    {element.props.children}
+                                </element.type>
+                            </li>
+                        })
                     }
-                </ol>
-            </>
+                </ul>
+            </div>
         );
     }
 }

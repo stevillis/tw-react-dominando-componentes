@@ -5,10 +5,11 @@ import ClickList from "./components/ClickList";
 function App() {
   return (
     <div>
-      <ClickList>
+      <ClickList number="123">
+        <h1>
+          Hello, world!
+        </h1>
         <span>Apple</span>
-        <span>Watermelon</span>
-        <span>Melon</span>
       </ClickList>
     </div>
   );
