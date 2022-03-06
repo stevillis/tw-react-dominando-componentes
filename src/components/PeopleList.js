@@ -20,12 +20,23 @@ const data = [
 ]
 
 class PeopleList extends Component {
+    constructor(props) {
+        super(props);
+        this.helloPerson = this.helloPerson.bind(this);
+    }
+
+    helloPerson(person) {
+        alert(person.nome);
+    }
+
     render() {
         return (
             <ul>
                 {
                     data.map(person =>
-                        <li key={person.id}>Nome: {person.nome}, Idade: {person.idade} anos</li>
+                        <li key={person.id} onClick={this.helloPerson.bind(this, person)}>
+                            Nome: {person.nome}, Idade: {person.idade} anos
+                        </li>
                     )
                 }
             </ul>
