@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { Channel } from '../services/EventEmitter';
 
 class ClickListItem extends Component {
 
     static defaultProps = {
         index: 0,
-        handleClick: () => { }
-
     }
 
     constructor(props) {
@@ -24,7 +23,7 @@ class ClickListItem extends Component {
                 counter: state.counter + 1
             }
         });
-        this.props.handleClick();
+        Channel.emit('listItem:click')
     }
 
     render() {
