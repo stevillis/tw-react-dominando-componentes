@@ -32,13 +32,10 @@ class App extends Component {
       <div className="App">
         <div>
           <ul>
-            <li ref={this.item1}>
-              {this.state.selectedItem === this.item1 ? <Time /> : ''}
-            </li>
-            <li ref={this.item2}>
-              {this.state.selectedItem === this.item2 ? <Time /> : ''}
-            </li>
+            <li ref={this.item1}></li>
+            <li ref={this.item2}></li>
           </ul>
+          <Time container={this.state.selectedItem.current} />
           <button onClick={this.toggleItem}>Toggle</button>
         </div>
         <MyVideo src="https://ak.picdn.net/shutterstock/videos/1048055704/preview/stock-footage-mother-multi-tasking-holding-baby-infant-and-using-computer-laptop-at-home-candid-authentic-and.webm" />

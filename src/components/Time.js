@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 class Time extends Component {
     constructor(props) {
@@ -7,14 +8,6 @@ class Time extends Component {
         this.state = {
             time: 0
         }
-
-        /*
-        setTimeout(() => {
-            this.setState({
-                time: 5
-            })
-        }, 2000)
-        */
     }
 
     componentDidMount() {
@@ -33,10 +26,9 @@ class Time extends Component {
     }
 
     render() {
-        const { state } = this;
-        return (
-            <div>{state.time}</div>
-        );
+        const { state, props } = this,
+            element = <div>{state.time}</div>
+        return props.container ? ReactDOM.createPortal(element, props.container) : 'Loading...';
     }
 }
 
